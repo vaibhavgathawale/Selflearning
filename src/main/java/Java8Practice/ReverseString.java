@@ -31,7 +31,7 @@ public class ReverseString {
         int len = str2.length();
         IntStream.range(0, len)
                 .map(i -> len - 1 - i)
-                .mapToObj(j->str.charAt(j))
+                .mapToObj(j->str2.charAt(j))
                 .forEach(System.out::print);
 
 
