@@ -10,6 +10,5 @@ public class FindMaxValue {
                          .max(Integer::compareTo)
                          .get();
         System.out.println("Max Value :"+max);
-
     }
 }
