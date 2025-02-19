@@ -38,15 +38,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 				empJson.put("EmpEmailId", emp.getEmpEmailId() );
 				empJson.put("empGender", emp.getEmpGender());
 				List<Address> addressL = emp.getAddressList();
-				for(Address ad:addressL) {
-					addressJson = new JSONObject();
-					
-					addressJson.put("city", ad.getCity());
-					addressJson.put("state", ad.getState());
-					addressJson.put("addLineOne", ad.getaLine1());
-					jArrayaddress.put(addressJson);
-				}
-				empJson.put("newAddress", jArrayaddress);
+//				for(Address ad:addressL) {
+//					addressJson = new JSONObject();
+//
+//					addressJson.put("city", ad.getCity());
+//					addressJson.put("state", ad.getState());
+//					addressJson.put("addLineOne", ad.getaLine1());
+//					jArrayaddress.put(addressJson);
+//				}
+				empJson.put("Address", jArrayaddress);
 				
 				jArray.put(empJson);
 			}

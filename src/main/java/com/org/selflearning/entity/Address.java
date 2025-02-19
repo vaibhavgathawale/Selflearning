@@ -1,16 +1,12 @@
 package com.org.selflearning.entity;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Address {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int aId;
 	private String aLine1;
 	private String city;
@@ -69,5 +65,6 @@ public class Address {
 	public void setType(String type) {
 		this.type = type;
 	}
+
 
 }

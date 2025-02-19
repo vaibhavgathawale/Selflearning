@@ -1,6 +1,7 @@
 package Java8Practice;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
@@ -14,6 +15,8 @@ public class ReverseString {
         StringBuffer stringBuffer = new StringBuffer(str);
         stringBuffer.reverse();
         System.out.println("Rverse String is : "+stringBuffer);
+
+
         System.out.println("________________________1____________________________");
 
         //Using for loop
@@ -23,6 +26,8 @@ public class ReverseString {
             reversedString=reversedString+str1.charAt(i);
         }
         System.out.println("Rverse String is :"+reversedString);
+
+
         System.out.println("________________________2____________________________");
 
 
@@ -34,7 +39,18 @@ public class ReverseString {
                 .mapToObj(j->str2.charAt(j))
                 .forEach(System.out::print);
 
+        System.out.println("________________________3____________________________");
 
+        String original = "Hello, World!";
+        String reversed = original.chars()
+                .mapToObj(c -> String.valueOf((char) c))
+                .collect(Collectors.collectingAndThen(Collectors.toList(),
+                        lst -> {
+                            Collections.reverse(lst);
+                            return String.join("", lst);
+                        }));
+
+        System.out.println(reversed);  // Output: !dlroW ,olleH
 
     }
 }

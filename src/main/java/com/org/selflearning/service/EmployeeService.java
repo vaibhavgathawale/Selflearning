@@ -10,5 +10,5 @@ public interface EmployeeService {
 
 	public JSONObject saveEmployee(Employee emp);
 
-	public JSONObject deleteEmployee(String bId);
+	public JSONObject deleteEmployee(String eId);
 }

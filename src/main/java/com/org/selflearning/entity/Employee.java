@@ -1,5 +1,9 @@
 package com.org.selflearning.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -9,6 +13,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Employee {
     @Id
 	private String empId;
@@ -20,12 +27,7 @@ public class Employee {
 	@OneToMany(mappedBy="employee",fetch = FetchType.LAZY)
 	private List<Address> addressList;
 	
-	public List<Address> getAddressList() {
-		return addressList;
-	}
-	public void setAddressList(List<Address> addressList) {
-		this.addressList = addressList;
-	}
+
 	public String getEmpId() {
 		return empId;
 	}
@@ -55,6 +57,12 @@ public class Employee {
 	}
 	public void setEmpGender(String empGender) {
 		this.empGender = empGender;
+	}
+	public List<Address> getAddressList() {
+		return addressList;
+	}
+	public void setAddressList(List<Address> addressList) {
+		this.addressList = addressList;
 	}
 	
 }
