@@ -1,33 +1,33 @@
 package practice;
 
-import io.micrometer.core.instrument.binder.kafka.KafkaClientMetrics;
 
-public class Test {
+import java.io.*;
 
+public class Test implements Serializable{
+    private String sessionId;
+    private transient long lastAccessTime=5;
+
+    public Test(String sessionId, long lastAccessTime) {
+        this.sessionId = sessionId;
+        this.lastAccessTime = lastAccessTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Session ID: " + sessionId + ", Last Access Time: " + lastAccessTime;
+    }
     public static void main(String[] args) {
+        Test session = new Test("ABC123", 55);
 
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("session.ser"));
+             ObjectInputStream ois = new ObjectInputStream(new FileInputStream("session.ser"))) {
 
-        String str = "Hello";
-        String str1 = str + "World";
+            oos.writeObject(session);
 
-        System.out.println("Hash Code 0 "+str.hashCode());
-
-        System.out.println("Hash Code 1 "+str1.hashCode());
-
-        String str2 = "Helloworld";
-        System.out.println("Hash Code 2 "+str2.hashCode());
-
-        String str3 = str2.intern();
-        System.out.println("Hash Code 3 "+str3.hashCode());
-
-        if(str1.equals(str3))
-            System.out.println("Equal");
-        else
-            System.out.println("Not equal");
-
-
-
-
-
+            Test deserializedSession = (Test) ois.readObject();
+            System.out.println("Deserialized Session: " + deserializedSession);
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
