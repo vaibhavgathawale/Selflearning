@@ -11,7 +11,10 @@ public class Test {
 
         List list = new ArrayList<String>();
         list.add("AS");
-        list.add("bb");
+
+
+        System.out.println(list);
+        System.out.println(list);
 
     }
 
