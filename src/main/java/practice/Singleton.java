@@ -1,6 +1,5 @@
 package practice;
 
-import com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader;
 
 public class Singleton {
 
