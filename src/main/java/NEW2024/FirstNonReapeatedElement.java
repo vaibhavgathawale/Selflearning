@@ -14,7 +14,7 @@ public class FirstNonReapeatedElement {
         Map<Character,Long> map = input.chars().mapToObj(x -> (char)x)
                 .collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()));
 
-        // Find the second non-repeating character
+        // Find the first non-repeating character
         Character firstNonRepitativeNumbers = map.entrySet().stream()
                 .filter(entry -> entry.getValue()  ==1)
                 .map(Map.Entry::getKey)

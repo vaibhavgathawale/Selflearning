@@ -7,8 +7,10 @@ public class Anagram {
     public static void main(String[] args) {
         String str1 ="Hello";
         String str2 ="World";
+
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();
+
         if(str1.length()==str2.length()){
             //converting string to chararray
             char[] charArray1 = str1.toCharArray();

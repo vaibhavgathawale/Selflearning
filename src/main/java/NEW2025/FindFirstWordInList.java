@@ -1,0 +1,13 @@
+package NEW2025;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class FindFirstWordInList {
+    public static void main(String[] args) {
+
+        List<String> list = Arrays.asList("Apple","Banana","Hello","Gauva","Watermalen","Hey");
+
+        list.stream().filter(x -> x.startsWith("H")).forEach(System.out::println);
+    }
+}

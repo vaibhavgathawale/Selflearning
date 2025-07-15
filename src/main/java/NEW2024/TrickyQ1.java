@@ -19,6 +19,10 @@ public class TrickyQ1 {
 
         if(str1==str2)
             System.out.println("Equal");
+        if(str1.equals(str2)){
+            System.out.println("True using Equals methods");
+        }
+
         else
             System.out.println("Not equal");
     }
