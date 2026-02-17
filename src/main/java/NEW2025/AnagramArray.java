@@ -4,27 +4,21 @@ import java.util.Arrays;
 
 public class AnagramArray {
     public static void main(String[] args) {
-        int arr1[] = {1,2,3,4,5};
-        int arr2[] = {5,4,3,1,2,};
 
-        if(isAnagram(arr1,arr2)){
-            System.out.println("Is Anagram");
-        }else{
+        int arr1[] = {1, 2, 3, 4, 5};
+        int arr2[] = {5, 4, 3, 1, 2,};
+
+        if (arr1.length == arr2.length) {
+            Arrays.sort(arr1);
+            Arrays.sort(arr2);
+            boolean result = Arrays.equals(arr1, arr2);
+            if (result) {
+                System.out.println("Anagram");
+            } else {
+                System.out.println("Not Anagram");
+            }
+        } else {
             System.out.println("Not Anagram");
         }
     }
-    public static boolean isAnagram(int A[],int B[]){
-        if(A.length!=B.length){
-            return false;
-        }
-        Arrays.sort(A);
-        Arrays.sort(B);
-        return Arrays.equals(A,B);
-
-    }
-
-
-
-
-
 }

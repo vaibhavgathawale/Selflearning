@@ -20,5 +20,16 @@ public class FirstNonRepitativeElementString {
                 .get();
 
         System.out.println(character);
+        System.out.println("============================>");
+
+        Character map1 = input.chars().mapToObj(x -> (char)x)
+                .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new,Collectors.counting()))
+                .entrySet()
+                .stream()
+                 .filter(x -> x.getValue()==1)
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .get();
+        System.out.println(map1);
     }
 }

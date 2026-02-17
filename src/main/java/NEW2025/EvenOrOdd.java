@@ -7,9 +7,20 @@ import java.util.stream.Collectors;
 public class EvenOrOdd {
     public static void main(String[] args) {
 
-        List<Integer> list = Arrays.asList(10, 7, 15, 43, 94, 77, 62, 32, 16);
-        List<Integer> result = list.stream().filter(x -> x%2 == 0).collect(Collectors.toList());
+        int[] arr = {9, 2, 4, 0, 5, 0, 1, 4, 6, 8};
 
-        System.out.println(result);
+        // Convert int[] to List<Integer> for easier streaming
+        List<Integer> list = Arrays.stream(arr).boxed().collect(Collectors.toList());
+
+        List<Integer> evenNumbers = list.stream()
+                .filter(n -> n % 2 == 0)
+                .collect(Collectors.toList());
+
+        List<Integer> oddNumbers = list.stream()
+                .filter(n -> n % 2 != 0)
+                .collect(Collectors.toList());
+
+        System.out.println("Even Numbers: " + evenNumbers);
+        System.out.println("Odd Numbers: " + oddNumbers);
     }
 }

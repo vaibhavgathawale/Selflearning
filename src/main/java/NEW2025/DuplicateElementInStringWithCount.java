@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static jdk.nashorn.internal.objects.NativeArray.forEach;
 
 public class DuplicateElementInStringWithCount {
 
