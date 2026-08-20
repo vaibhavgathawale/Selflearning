@@ -21,6 +21,7 @@ public class DuplicateListElementCount {
 
         System.out.println("Duplicate elements: " + duplicates);
 
+        System.out.println("================================>");
 
 
 
@@ -31,7 +32,6 @@ public class DuplicateListElementCount {
 
 
         System.out.println(result);
-        System.out.println("================================>");
 
 
 

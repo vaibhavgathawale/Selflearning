@@ -1,5 +1,8 @@
 package com.org.selflearning.exceptions;
 
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice
 public class ExceptionTypes {
 
 	public static String testArithmatic() throws ArithmeticException, NumberFormatException {

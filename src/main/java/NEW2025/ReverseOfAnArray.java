@@ -15,6 +15,5 @@ public class ReverseOfAnArray {
         List<Integer> list = Arrays.stream(array).boxed().collect(Collectors.toList());
         Collections.reverse(list);
         list.forEach(System.out::println);
-
     }
 }

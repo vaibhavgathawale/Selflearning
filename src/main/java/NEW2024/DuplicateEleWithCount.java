@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 public class DuplicateEleWithCount {
     public static void main(String[] args) {
+
         List<String> names = Arrays.asList("AB","AB","cd","fd","df");
 
         Map<String,Long>result = names.stream()

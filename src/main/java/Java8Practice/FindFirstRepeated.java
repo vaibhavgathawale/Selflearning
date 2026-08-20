@@ -10,7 +10,7 @@ public class FindFirstRepeated {
         String input = "Java Articles are Awesome";
         Character  result = input.chars()
                 .mapToObj(s -> Character.toLowerCase(Character.valueOf((char) s))) //Converting String to charset
-                        .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new,Collectors.counting())) //Store the chars in map with count
+                         .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new,Collectors.counting())) //Store the chars in map with count
                 .entrySet()
                 .stream()
                 .filter(entry -> entry.getValue() >1L)

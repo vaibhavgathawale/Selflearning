@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class NotDuplicateStingElement {
     public static void main(String[] args) {
 
-        String str = "Vaibhav Athawale";
+        String str = "Vaibhav Athawale Athawale";
 
         // Count occurrence of each character
         Map<Character, Long> charCount = str.chars() // returns IntStream

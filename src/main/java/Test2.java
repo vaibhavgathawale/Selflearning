@@ -3,13 +3,16 @@ import NEW2025.EmployeeSalary;
 import java.util.*;
 
 
-public class Test2  {
+//public class Test2  {
 
 //        Decode String
 //
 //        Input: s = "2[abc]3[cd]ef"
 //
 //        Output: "abcabccdcdcdef"
+    //        Output :
+//        abcd cdba
+//        java aavj avaj
 
 
 //
@@ -19,9 +22,7 @@ public class Test2  {
 //
 
 
-    //        Output :
-//        abcd cdba
-//        java aavj avaj
+
 
 //    Map<String, List<String>> anagramGroups = new HashMap<>();
 //
@@ -77,4 +78,4 @@ public class Test2  {
 //        System.out.print(ArrayChallenge(arr));  // prints 0 if subset found, 1 otherwise
 //    }
 
-}
+//}
